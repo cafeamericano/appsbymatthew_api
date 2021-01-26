@@ -13,5 +13,11 @@ pipeline {
       }
     }
 
+    stage('Run') {
+      steps {
+        sh 'docker run --publish 5000:5000 appsbymatthew'
+      }
+    }
+
   }
 }
